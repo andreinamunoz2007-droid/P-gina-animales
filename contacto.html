@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" href="imagenes/logo_animales.jpg">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>Contacto - Reino Animal</title>
+</head>
+<body>
+  
+    <header class="header-glass">
+        <nav class="navbar-glass">
+            <a href="index.html" class="logo">Reino<span>Animal</span></a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="vertebrados.html">Vertebrados</a></li>
+                <li><a href="invertebrados.html">Invertebrados</a></li>
+                <li><a href="contacto.html" class="active">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="tarjeta-formulario">
+            <h2>Formulario de Registro / Consulta Académica</h2>
+            <form action="#" method="POST">
+                
+                <div class="controlador">
+                    <label for="nombre">Nombre Completo:</label>
+                    <input type="text" id="nombre" name="nombre" required 
+                           pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{3,50}" 
+                           title="El nombre solo debe contener letras y un mínimo de 3 caracteres.">
+                </div>
+
+                <div class="controlador">
+                    <label for="telefono">Teléfono de Contacto (Ej: 0414-1234567):</label>
+                    <input type="tel" id="telefono" name="telefono" required 
+                           pattern="[0-9]{4}-[0-9]{7}" 
+                           title="Formato requerido: 4 números, un guion y 7 números (Ej: 0414-1234567).">
+                </div>
+
+                <div class="controlador">
+                    <label for="categoria">Categoría que deseas investigar:</label>
+                    <select id="categoria" name="categoria" required>
+                        <option value="">-- Elige una categoría --</option>
+                        <option value="vert">Animales Vertebrados</option>
+                        <option value="invert">Animales Invertebrados</option>
+                        <option value="ambos">Ambos Grupos</option>
+                    </select>
+                </div>
+
+                <div class="controlador">
+                    <label for="mensaje">Detalla tu consulta o mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Escribe aquí tus comentarios..."></textarea>
+                </div>
+
+                <div class="controlador-checkbox">
+                    <input type="checkbox" id="terminos" name="terminos" required>
+                    <label for="terminos">Acepto los términos de validación de este sitio educativo.</label>
+                </div>
+
+                <button type="submit" class="btn-enviar">Enviar Registro</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer-flex">
+        <p>&copy; 2026 - Página Educativa de Animales Vertebrados e Invertebrados</p>
+    </footer>
+
+</body>
+</html>
